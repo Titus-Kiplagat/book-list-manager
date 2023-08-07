@@ -27,14 +27,34 @@ const addBooks = () => {
   }
 };
 
+const renderBooks = () => {
+  const books = getBooksFromLocalStorage();
+  const tableBody = document.getElementById('tbody');
+  tableBody.innerHTML = '';
+
+  books.forEach((book, index) => {
+    const tableRow = `
+      <tr>
+        <td>${book.title} by ${book.author}</td>
+        <td class="text-end">
+          <button class="btn btn-danger btn-sm" onclick="removeBook(${index})">
+            delete
+          </button>
+        </td>
+      </tr>
+    `;
+    tableBody.insertAdjacentHTML('beforeend', tableRow);
+  });
+};
+
 const handleFormSubmit = () => {
   document.getElementById('form').addEventListener('submit', addBooks);
 };
-
-handleFormSubmit();
 
 const handleButtonClick = () => {
   document.getElementById('add-button').addEventListener('click', addBooks);
 };
 
+handleFormSubmit();
 handleButtonClick();
+renderBooks();
