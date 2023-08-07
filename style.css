@@ -1,5 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Pangolin', sans-serif;
+}
+
+.table-container {
+  height: 25rem;
+  max-width: 75rem;
+  overflow: auto;
+}
+
+.form-container {
+  width: 100%;
+}
+
+@media screen and (width >= 768px) {
+  .form-container {
+    width: 37.5rem;
+  }
+
+  .table-container {
+    width: 40rem;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .table-container {
+    width: 75rem;
+  }
 }
