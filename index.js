@@ -12,21 +12,6 @@ function CreateBookObject(title, author) {
   this.author = author;
 }
 
-const addBooks = () => {
-  const bookTitle = document.getElementById('title-input').value.trim();
-  const bookAuthor = document.getElementById('author-input').value.trim();
-
-  if (bookTitle && bookAuthor) {
-    const books = getBooksFromLocalStorage();
-    const book = new CreateBookObject(bookTitle, bookAuthor);
-    books.unshift(book);
-    saveBooksTolocalStorage(books);
-
-    document.getElementById('title-input').value = '';
-    document.getElementById('author-input').value = '';
-  }
-};
-
 const renderBooks = () => {
   const books = getBooksFromLocalStorage();
   const tableBody = document.getElementById('tbody');
@@ -45,6 +30,23 @@ const renderBooks = () => {
     `;
     tableBody.insertAdjacentHTML('beforeend', tableRow);
   });
+};
+
+const addBooks = (event) => {
+  event.preventDefault();
+  const bookTitle = document.getElementById('title-input').value.trim();
+  const bookAuthor = document.getElementById('author-input').value.trim();
+
+  if (bookTitle && bookAuthor) {
+    const books = getBooksFromLocalStorage();
+    const book = new CreateBookObject(bookTitle, bookAuthor);
+    books.unshift(book);
+    saveBooksTolocalStorage(books);
+    renderBooks();
+
+    document.getElementById('title-input').value = '';
+    document.getElementById('author-input').value = '';
+  }
 };
 
 const removeBook = (index) => {
