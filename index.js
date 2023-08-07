@@ -49,6 +49,7 @@ const addBooks = (event) => {
   }
 };
 
+// eslint-disable-next-line no-unused-vars
 const removeBook = (index) => {
   const books = getBooksFromLocalStorage();
   books.splice(index, 1);
