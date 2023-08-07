@@ -32,3 +32,9 @@ const handleFormSubmit = () => {
 };
 
 handleFormSubmit();
+
+const handleButtonClick = () => {
+  document.getElementById('add-button').addEventListener('click', addBooks);
+};
+
+handleButtonClick();
