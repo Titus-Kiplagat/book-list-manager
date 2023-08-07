@@ -6,3 +6,8 @@ const getBooksFromLocalStorage = () => {
 const saveBooksTolocalStorage = (books) => {
   localStorage.setItem('Books', JSON.stringify(books));
 };
+
+function CreateBookObject(title, author) {
+	this.title = title;
+	this.author = author;
+}
