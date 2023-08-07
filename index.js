@@ -47,6 +47,14 @@ const renderBooks = () => {
   });
 };
 
+const removeBook = (index) => {
+  const books = getBooksFromLocalStorage();
+  books.splice(index, 1);
+
+  saveBooksTolocalStorage(books);
+  renderBooks();
+};
+
 const handleFormSubmit = () => {
   document.getElementById('form').addEventListener('submit', addBooks);
 };
