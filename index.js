@@ -26,3 +26,9 @@ const addBooks = () => {
     document.getElementById('author-input').value = '';
   }
 };
+
+const handleFormSubmit = () => {
+  document.getElementById('form').addEventListener('submit', addBooks);
+};
+
+handleFormSubmit();
