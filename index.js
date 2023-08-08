@@ -1,10 +1,10 @@
 const getBooksFromLocalStorage = () => {
-  const books = localStorage.getItem("Books");
+  const books = localStorage.getItem('Books');
   return books ? JSON.parse(books) : [];
 };
 
 const saveBooksTolocalStorage = (books) => {
-  localStorage.setItem("Books", JSON.stringify(books));
+  localStorage.setItem('Books', JSON.stringify(books));
 };
 
 class BookObject {
@@ -16,8 +16,8 @@ class BookObject {
 
 const renderBooks = () => {
   const books = getBooksFromLocalStorage();
-  const tableBody = document.getElementById("tbody");
-  tableBody.innerHTML = "";
+  const tableBody = document.getElementById('tbody');
+  tableBody.innerHTML = '';
 
   books.forEach((book, index) => {
     const tableRow = `
@@ -30,14 +30,14 @@ const renderBooks = () => {
         </td>
       </tr>
     `;
-    tableBody.insertAdjacentHTML("beforeend", tableRow);
+    tableBody.insertAdjacentHTML('beforeend', tableRow);
   });
 };
 
 const addBooks = (event) => {
   event.preventDefault();
-  const bookTitle = document.getElementById("title-input").value.trim();
-  const bookAuthor = document.getElementById("author-input").value.trim();
+  const bookTitle = document.getElementById('title-input').value.trim();
+  const bookAuthor = document.getElementById('author-input').value.trim();
 
   if (bookTitle && bookAuthor) {
     const books = getBooksFromLocalStorage();
@@ -46,8 +46,8 @@ const addBooks = (event) => {
     saveBooksTolocalStorage(books);
     renderBooks();
 
-    document.getElementById("title-input").value = "";
-    document.getElementById("author-input").value = "";
+    document.getElementById('title-input').value = '';
+    document.getElementById('author-input').value = '';
   }
 };
 
@@ -61,11 +61,11 @@ const removeBook = (index) => {
 };
 
 const handleFormSubmit = () => {
-  document.getElementById("form").addEventListener("submit", addBooks);
+  document.getElementById('form').addEventListener('submit', addBooks);
 };
 
 const handleButtonClick = () => {
-  document.getElementById("add-button").addEventListener("click", addBooks);
+  document.getElementById('add-button').addEventListener('click', addBooks);
 };
 
 handleFormSubmit();
