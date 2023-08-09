@@ -10,26 +10,37 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
+    <script src="index.js" type="module" defer></script>
     <title>Book List Manager</title>
   </head>
   <body>
+    <header class="fixed-top">
+      <div class="container desktop-container">
+        <p class="logo fs-4 fw-bold">Awesome Books</p>
+        <nav class="nav nav-pills">
+          <a class="nav-link" href="#books-list">List</a>
+          <span class="divider my-auto"></span>
+          <a class="nav-link" href="#add-new-book">Add new</a>
+          <span class="divider my-auto"></span>
+          <a class="nav-link" href="#contact-us">Contact</a>
+        </nav>
+      </div>
+      <span class="date"></span>
+    </header>
     <main>
       <section id="books-list" class="h-50">
         <div class="container">
-        <h1 class="text-center mb-5">All Awesome Books</h1>
-        <div class="table-container">
-          <table class="table border-5 table-hover table-striped">
-            <tbody id="tbody"></tbody>
-          </table>
-        </div>
+          <h1 class="text-center mb-5">All Awesome Books</h1>
+          <div class="table-container">
+            <table class="table border-5 table-hover table-striped">
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
         </div>
       </section>
 
       <section id="add-new-book" class="h-50">
-        <div
-          class="book-records d-flex flex-column align-items-center"
-        >
+        <div class="book-records d-flex flex-column align-items-center">
           <div class="form-container">
             <form id="form">
               <h1 class="text-center">Add a new book</h1>
@@ -60,6 +71,33 @@
           </div>
         </div>
       </section>
+
+      <section id="contact-us" class="h-50">
+        <div class="container d-flex flex-column gap-5">
+          <h1 class="text-center">Contact information</h1>
+          <div>
+            <p class="fs-5">
+              <span
+                >Do you have any questions or you want to just say
+                "Hello"?</span
+              ><span>You can reach out to us!</span>
+            </p>
+            <ul class="mt-5">
+              <li class="p-2 ms-2">Our email: bookstore@gmail.com</li>
+              <li class="p-2 ms-2">Our phone number: 0123456789</li>
+              <li class="p-2 ms-2">
+                Our address: BookStore 22, 30000 Eldoret, Kenya
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
-	</body>
+    <footer class="footer">
+      <div class="container d-flex justify-content-between">
+        <p>© All rights reserved. @Titus && Hamza</p>
+        <p>Created by HTML, Javascript and Boostrap</p>
+      </div>
+    </footer>
+  </body>
 </html>
