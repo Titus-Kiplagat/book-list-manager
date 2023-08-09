@@ -93,7 +93,6 @@ main {
   margin: 1rem;
 }
 
-
 @media screen and (width >= 768px) {
   .desktop-container {
     justify-content: space-between;
