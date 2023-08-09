@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Pangolin', sans-serif;
+  font-family: "Pangolin", sans-serif;
 }
 
 .table-container {
@@ -15,6 +15,14 @@
 
 .form-container {
   width: 100%;
+}
+
+.table-border-outside {
+  border: 0.375rem solid black;
+}
+
+.table-border-outside-none {
+  border: none;
 }
 
 @media screen and (width >= 768px) {
