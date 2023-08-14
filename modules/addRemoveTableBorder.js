@@ -1,7 +1,7 @@
-import bookManager from './bookManager.js';
+import totalBooksCount from './totalBooksCount.js';
 
 const addRemoveTableBorder = () => {
-  const totalCount = bookManager.totalBooksCount();
+  const totalCount = totalBooksCount();
   const table = document.querySelector('.table');
 
   if (totalCount === 0) {
