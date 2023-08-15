@@ -1,11 +1,13 @@
-import addRemoveTableBorder from './modules/addRemoveTableBorder.js';
-import bookManager from './modules/bookManager.js';
-import handleNavLinkClick from './modules/handleNavLinkClick.js';
 import displayDateAndTime from './modules/displayDateAndTime.js';
+import handleAddButtonClick from './modules/handleAddButtonClick.js';
+import handleFormSubmit from './modules/handleFormSubmit.js';
+import renderBooks from './modules/renderBooks.js';
+import addRemoveTableBorder from './modules/addRemoveTableBorder.js';
+import handleDomContentLoad from './modules/handleDomContentLoad.js';
 
 addRemoveTableBorder();
-document.addEventListener('DOMContentLoaded', () => handleNavLinkClick());
-bookManager.handleFormSubmit();
-bookManager.handleAddButtonClick();
-bookManager.renderBooks();
 displayDateAndTime();
+handleFormSubmit();
+handleAddButtonClick();
+handleDomContentLoad();
+renderBooks();
